@@ -1,12 +1,12 @@
 <?php
      class node {
  
-           public $name;
-           public $left;
-           public $right;
-		   public $right_cost = 0;
-		   public $left_cost = 0;
-           public $level;
+			public $name;
+			public $left;
+			public $right;
+			public $right_cost = 0;
+			public $left_cost = 0;
+			public $level;
 
            public function node($name) {
                   $this->name = $name; 
@@ -79,52 +79,34 @@
 		   
      }       
 	  
-	 /*  S 
-         /\
-        A  B
-	*/
-     $start = new node('S');
-     $start->left = new node('A');
-	 $start->left_cost = 1;
-     $start->right = new node('B');
-	 $start->right_cost = 2;
-	 
-	 /*   S 
-         / \
-        A    B
-	   / \	/ \
-	  D   E F G
-	*/ 
-	
-     $start->left->left = new node('D');
-	 $start->left->left_cost = 3;	
 
-     $start->left->right = new node('E');
-	 $start->left->right_cost = 4;
-	 
-     $start->right->left = new node('F');
-	 $start->right->left_cost = 5; 
-	 
-     $start->right->right = new node('G');
-	 $start->right->right_cost = 7; 
- 
-	 
-	 /*
-			  S 
-         /        \
-        A          B
-	   /  \	     /   \
-	  D    E     F    G
-	 /\   
-	J  K  
-	*/ 
+	$start = new node('S');
+	$start->left = new node('A');
+	$start->left_cost = 1;
+	$start->right = new node('B');
+	$start->right_cost = 2;
 
-     $start->left->left->left = new node('J');
-	 $start->left->left->left_cost = 6;	
 
-     $start->left->left->right = new node('K');
-	 $start->left->left->right_cost = 7;
-	 
-	 echo "Visited Nodes:\n\n";
-	 echo breadth_first($start, 'F');
+	$start->left->left = new node('D');
+	$start->left->left_cost = 3;	
+
+	$start->left->right = new node('E');
+	$start->left->right_cost = 4;
+
+	$start->right->left = new node('F');
+	$start->right->left_cost = 5; 
+
+	$start->right->right = new node('G');
+	$start->right->right_cost = 7; 
+
+
+
+	$start->left->left->left = new node('J');
+	$start->left->left->left_cost = 6;	
+
+	$start->left->left->right = new node('K');
+	$start->left->left->right_cost = 7;
+
+	echo "Visited Nodes:\n\n";
+	echo breadth_first($start, 'F');
 ?>
