@@ -1,5 +1,7 @@
 A breadth-first search example with path costs in PHP. Output traces the path.
 
+Tree Image: (https://raw.githubusercontent.com/jcink/breadth-first-search-php/master/breadth-first-tree.png)
+
 --------------------------------------------
 
 WHEN "GOAL" = J
@@ -44,5 +46,3 @@ Cost from node B to node F: 5
 Total Search Path Cost: 15
 
 --------------------------------------------
-
-(https://raw.githubusercontent.com/jcink/breadth-first-search-php/master/breadth-first-tree.png)
